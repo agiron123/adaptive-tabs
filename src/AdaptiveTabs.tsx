@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Tabs, Tab, Button, Menu, MenuItem } from '@mui/material';
-import { MoreVert } from '@mui/icons-material';
 
 interface TabItem {
   label: string;
@@ -67,7 +66,6 @@ const AdaptiveTabs: React.FC<AdaptiveTabsProps> = ({ tabs }) => {
         <>
           <Button
             onClick={(e) => setMenuAnchor(e.currentTarget)}
-            startIcon={<MoreVert />}
             sx={{ minWidth: 40, padding: '6px 8px' }}
           >
             More
