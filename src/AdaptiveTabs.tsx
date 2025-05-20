@@ -76,7 +76,13 @@ const AdaptiveTabs: React.FC<AdaptiveTabsProps> = ({ tabs }) => {
             onClose={() => setMenuAnchor(null)}
           >
             {hiddenTabs.map((tab) => (
-              <MenuItem key={tab.id} onClick={() => setSelectedTab(tab.id)}>
+              <MenuItem
+                key={tab.id}
+                onClick={() => {
+                  setSelectedTab(tab.id);
+                  setMenuAnchor(null); // Close the menu after selection
+                }}
+              >
                 {tab.label}
               </MenuItem>
             ))}
